@@ -21,4 +21,7 @@ const UserCtrl = require('../controllers/user.controller')()
 router.route('/')
     .get(UserCtrl.getAll)
 
-module.exports = router
+router.route('/create')
+    .post(UserCtrl.createUser)
+
+    module.exports = router
